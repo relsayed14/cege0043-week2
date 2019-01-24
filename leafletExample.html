@@ -48,6 +48,15 @@
 		L.marker([51.5,-0.09]).addTo(mymap)
 		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 
+		//add a circle
+		L.circle([51.5,-0.09],500, {
+			color:'red',
+			fillColor:'#f03',
+			fillOpacity: 0.5
+		}).addTo(mymap).bindPopup("I am a circle");
+
+		
+
 	</script>
 
 </body>
