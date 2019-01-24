@@ -55,7 +55,19 @@
 			fillOpacity: 0.5
 		}).addTo(mymap).bindPopup("I am a circle");
 
-		
+
+		//add a polygon with 3 end points (i.e. a triangle)
+		var myPolygon = L.polygon([
+			[51.506,-0.08]
+			[52.503,-0.06]
+			[51.51, -0.047]
+		],{
+
+			color:'red',
+			fillColor:'#f04',
+			fillOpacity: '0.5'
+
+		}).addTo(mymap).bindPopup("I am a polygon.")
 
 	</script>
 
