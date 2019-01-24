@@ -40,9 +40,13 @@
 			maxZoom: 18,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,' +
 										'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,' +
-										'Imagery (C) <a href="http://mapbox.com">Mapbox</a>',
+										'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 										id:'mapbox.streets'
 									}).addTo(mymap);
+
+		//add a point
+		L.marker([51.5,-0.09]).addTo(mymap)
+		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 
 	</script>
 
