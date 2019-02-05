@@ -22,6 +22,9 @@
 	<!-- the mapid div will hold the map -->
 	<div id="mapid" style="width: 600px; height: 400px;"></div>
 
+	<!-- button to manually load the data -->
+	<button id="loadData" name="loadData" onclick="loadEarthquakeData()">Click here to load the data </button>
+
 	<!-- the following script will load the map and set the default view and zoom, as well as loading the
 	basemap tiles --> 
 
@@ -39,7 +42,7 @@
 							id:'mapbox.streets'
 							}).addTo(mymap);
 	</script>
-	
+
 </body>
 
 </html>
