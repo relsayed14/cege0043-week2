@@ -28,6 +28,18 @@
 
  			}
 
+ 		// creating a variable to hold the XMLHttpRequest() - this must be done outside a function so that all functions can use it
+ 		var client;
+
+ 		// creating the code to get the Earthquakes data using an XMLHttpRequest
+ 		function getEarthquakes() {
+ 			client = new XMLHttpRequest();
+
+ 			client.open('GET','https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson');
+ 			client.onreadystatechange = earthquakeResponse; // earthquakeResponse() does not work
+ 			client.send();
+ 		}
+
  	</script>
 
 </head>
