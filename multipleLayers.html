@@ -22,7 +22,7 @@
  		// Code to run when button is clicked
  		function loadEarthquakeData() {
 			// shows an alert message - so that we know something is happening
-			alert("load the data here");
+			alert("Loading Earthquakes");
 			// call the getEarthquakes code
 			getEarthquakes();
 
@@ -53,9 +53,12 @@
  		// convert received data (text) to JSON format and add it to the map
  		function loadEarthquakelayer(earthquakedata) {
  			// convert text to JSON
- 			var earthquakejson.JSON.parse(earthquakedata);
+ 			var earthquakejson = JSON.parse(earthquakedata);
  			// add the JSON layer onto the map - will appear using the default icons
  			earthquakelayer = L.geoJson(earthquakejson).addTo(mymap);
+
+ 			// change the map zoom so that all the data is shown
+ 			mymap.fitBounds(earthquakelayer.getBounds());
  		}
  		
 
