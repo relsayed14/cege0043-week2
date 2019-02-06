@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title> Test HTML Location Tracking Functionality </title>
+	<script>
+		// code to track location and display error if not retrieved
+		function trackLocation() {
+			if(navigator.geolocation) {
+				navigator.geolocation.watchPosition(showPosition);
+			} else {
+				document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser."
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
