@@ -10,6 +10,11 @@
 				document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser."
 			}
 		}
+
+		// code to feed location onto showLocation DIV
+		function showPosition(position) {
+			document.getElementById('showLocation').innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitutde: " = position.coords.longitude;
+		}
 	</script>
 </head>
 <body>
