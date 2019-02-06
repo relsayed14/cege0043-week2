@@ -51,8 +51,14 @@
  		}
 
  		// convert received data (text) to JSON format and add it to the map
- 		var earthquakejson.JSON.parse(earthquakedata);
+ 		function loadEarthquakelayer(earthquakedata) {
+ 			// convert text to JSON
+ 			var earthquakejson.JSON.parse(earthquakedata);
+ 			// add the JSON layer onto the map - will appear using the default icons
+ 			earthquakelayer = L.geoJson(earthquakejson).addTo(mymap);
+ 		}
  		
+
  	</script>
 
 </head>
