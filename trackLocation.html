@@ -7,19 +7,19 @@
 			if(navigator.geolocation) {
 				navigator.geolocation.watchPosition(showPosition);
 			} else {
-				document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser."
+				document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser.";
 			}
 		}
 
 		// code to feed location onto showLocation DIV
 		function showPosition(position) {
-			document.getElementById('showLocation').innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitutde: " = position.coords.longitude;
+			document.getElementById('showLocation').innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
 		}
 	</script>
 </head>
 <body>
 	<b> This code will display your current location </b>
-	<div id="showLocation"> Location will be display here </div>
-	<button id='trackLocation' onclick="trackLocation()"> Click Me to Get Your Location</button>
+	<div id='showLocation'> Location will be displayed here </div>
+	<button id='trackLocation' onclick='trackLocation()'> Click Me to Get Your Location</button>
 </body>
 </html>
