@@ -11,7 +11,13 @@
 		navigator.geolocation.getCurrentPosition(getPosition);
 		}
 
-
+	// the function to be called once the position has been found
+	// the system automatically gives the position variable
+	function getPosition(position) {
+		// can get the coordinates lat and lng from there 
+		// then modify a DIV to show the results to the user
+		document.getElementById('showLocation').innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+	}
 	</script>
 </head>
 <body>
