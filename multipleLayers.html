@@ -61,9 +61,13 @@
  			mymap.fitBounds(earthquakelayer.getBounds());
  		}
 
+ 		// adding a variable for the earthquake layer to be referenced by - should be global so the code can see the variable
+ 		var earthquakelayer;
+
  		// function to remove the Earthquake data & give alert
  		function removeEarthquakeData() {
- 			alert("remove the earthquake data here");
+ 			alert("Earthquake data will be removed");
+ 			mymap.removeLayer(earthquakelayer);
  		}
  		
 
