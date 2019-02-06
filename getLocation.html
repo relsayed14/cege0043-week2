@@ -2,6 +2,17 @@
 <html>
 <head>
 	<title> Test HTML Location Functionality </title>
+
+	<script>
+
+	// code to retrieve current location
+	function getLocation() {
+		alert('getting location');
+		navigator.geolocation.getCurrentPosition(getPosition);
+		}
+
+
+	</script>
 </head>
 <body>
  	<b> This code will display your current location </b>
